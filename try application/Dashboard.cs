@@ -36,6 +36,11 @@ namespace try_application
             Main.Controls.Add(RegisterPrints);
         }
 
-       
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            Attendence attendence = new Attendence();
+            Main.Controls.Clear();
+            Main.Controls.Add(attendence);
+        }
     }
 }

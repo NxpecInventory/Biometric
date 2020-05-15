@@ -41,5 +41,10 @@ namespace try_application
         public string CurrentSemclass { get; set; }
 
         public byte[] PrintBinary { get; set; }
+        public string Uploadimage { get; set; }
+       
+
+       // public string ImageFile { get; set; }
+        public DateTime AddedOn { get; set; }
     }
 }

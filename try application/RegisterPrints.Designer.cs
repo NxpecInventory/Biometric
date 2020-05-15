@@ -32,20 +32,10 @@
             this.add = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SelectedName = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuardianName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProgramId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrentSemclass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrintBinary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.Ids = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardianNames = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +47,21 @@
             this.ProgramIds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentSemclasses = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrintBinaries = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AddedOns = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Images = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuardianName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProgramId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentSemclass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintBinary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddedOn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +117,6 @@
             this.SelectedName.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.SelectedName.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SelectedName.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.Name,
             this.GuardianName,
             this.Address,
@@ -123,66 +126,14 @@
             this.ClassId,
             this.ProgramId,
             this.CurrentSemclass,
-            this.PrintBinary});
+            this.PrintBinary,
+            this.Id,
+            this.AddedOn,
+            this.Image});
             this.SelectedName.Location = new System.Drawing.Point(18, 100);
             this.SelectedName.Name = "SelectedName";
             this.SelectedName.Size = new System.Drawing.Size(927, 74);
             this.SelectedName.TabIndex = 18;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            // 
-            // GuardianName
-            // 
-            this.GuardianName.HeaderText = "GuardianName";
-            this.GuardianName.Name = "GuardianName";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            // 
-            // ContactInfo
-            // 
-            this.ContactInfo.HeaderText = "ContactInfo";
-            this.ContactInfo.Name = "ContactInfo";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            // 
-            // AdmissionDate
-            // 
-            this.AdmissionDate.HeaderText = "AdmissionDate";
-            this.AdmissionDate.Name = "AdmissionDate";
-            // 
-            // ClassId
-            // 
-            this.ClassId.HeaderText = "ClassId";
-            this.ClassId.Name = "ClassId";
-            // 
-            // ProgramId
-            // 
-            this.ProgramId.HeaderText = "ProgramId";
-            this.ProgramId.Name = "ProgramId";
-            // 
-            // CurrentSemclass
-            // 
-            this.CurrentSemclass.HeaderText = "CurrentSemclass";
-            this.CurrentSemclass.Name = "CurrentSemclass";
-            // 
-            // PrintBinary
-            // 
-            this.PrintBinary.HeaderText = "Print Binary";
-            this.PrintBinary.Name = "PrintBinary";
             // 
             // label1
             // 
@@ -222,12 +173,27 @@
             this.Classids,
             this.ProgramIds,
             this.CurrentSemclasses,
-            this.PrintBinaries});
+            this.PrintBinaries,
+            this.AddedOns,
+            this.Images});
             this.dataGridView1.Location = new System.Drawing.Point(18, 227);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(943, 299);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(870, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 29);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Ids
             // 
@@ -284,18 +250,80 @@
             this.PrintBinaries.HeaderText = "Print Binary";
             this.PrintBinaries.Name = "PrintBinaries";
             // 
-            // button3
+            // AddedOns
             // 
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(870, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 29);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Refresh";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AddedOns.HeaderText = "AddedOn";
+            this.AddedOns.Name = "AddedOns";
+            // 
+            // Images
+            // 
+            this.Images.HeaderText = "Image";
+            this.Images.Name = "Images";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // GuardianName
+            // 
+            this.GuardianName.HeaderText = "GuardianName";
+            this.GuardianName.Name = "GuardianName";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            // 
+            // ContactInfo
+            // 
+            this.ContactInfo.HeaderText = "ContactInfo";
+            this.ContactInfo.Name = "ContactInfo";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
+            // AdmissionDate
+            // 
+            this.AdmissionDate.HeaderText = "AdmissionDate";
+            this.AdmissionDate.Name = "AdmissionDate";
+            // 
+            // ClassId
+            // 
+            this.ClassId.HeaderText = "ClassId";
+            this.ClassId.Name = "ClassId";
+            // 
+            // ProgramId
+            // 
+            this.ProgramId.HeaderText = "ProgramId";
+            this.ProgramId.Name = "ProgramId";
+            // 
+            // CurrentSemclass
+            // 
+            this.CurrentSemclass.HeaderText = "CurrentSemclass";
+            this.CurrentSemclass.Name = "CurrentSemclass";
+            // 
+            // PrintBinary
+            // 
+            this.PrintBinary.HeaderText = "Print Binary";
+            this.PrintBinary.Name = "PrintBinary";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // AddedOn
+            // 
+            this.AddedOn.HeaderText = "AddedOn";
+            this.AddedOn.Name = "AddedOn";
+            // 
+            // Image
+            // 
+            this.Image.HeaderText = "Image";
+            this.Image.Name = "Image";
             // 
             // RegisterPrints
             // 
@@ -310,7 +338,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.add);
             this.Controls.Add(this.SearchStudent);
-            this.Name = "RegisterPrints";
+        
             this.Size = new System.Drawing.Size(964, 529);
             this.Load += new System.EventHandler(this.RegisterPrints_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectedName)).EndInit();
@@ -326,7 +354,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView SelectedName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuardianName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
@@ -337,8 +367,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProgramId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentSemclass;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrintBinary;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddedOn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ids;
         private System.Windows.Forms.DataGridViewTextBoxColumn Names;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuardianNames;
@@ -350,6 +381,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProgramIds;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentSemclasses;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrintBinaries;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddedOns;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Images;
     }
 }

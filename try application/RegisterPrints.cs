@@ -53,6 +53,9 @@ namespace try_application
                 dataGridView1["ProgramIds", row].Value = student.ProgramId;
                 dataGridView1["CurrentSemclasses", row].Value = student.CurrentSemclass;
                 dataGridView1["PrintBinaries", row].Value = student.PrintBinary;
+                dataGridView1["AddedOns", row].Value = student.AddedOn;
+                dataGridView1["Images", row].Value = student.Uploadimage;
+
             }
 
         }
@@ -82,7 +85,7 @@ namespace try_application
             if (Students.PrintBinary != null) {
                 Students SubmitStudents = new Students() { Id = Students.Id, StudentName = Students.StudentName, GuardianName = Students.GuardianName,
                     Address= Students.Address,AddmissionDate= Students.AddmissionDate,Status= Students.Status,ContactInfo= Students.ContactInfo,ClassId= Students.ClassId,
-                    ProgramId= Students.ProgramId,PrintBinary= Students.PrintBinary
+                    ProgramId= Students.ProgramId,PrintBinary= Students.PrintBinary,AddedOn=Students.AddedOn,Uploadimage=Students.Uploadimage
 
                 };
                 HttpClient httpClient = new HttpClient();
@@ -135,6 +138,8 @@ namespace try_application
                 SelectedName["ProgramId", row].Value = Students.ProgramId;
                 SelectedName["CurrentSemclass", row].Value = Students.CurrentSemclass;
                 SelectedName["PrintBinary", row].Value = Students.PrintBinary;
+                SelectedName["AddedOn", row].Value = Students.AddedOn;
+                SelectedName["Image", row].Value = Students.Uploadimage;
 
                 Template = null;
 
@@ -172,6 +177,8 @@ namespace try_application
             {
 
             }
+            SelectedName["AddedOn", row].Value = selectedRow.Cells[11].Value;
+            SelectedName["Image", row].Value = selectedRow.Cells[12].Value;
             Students.Id = int.Parse(selectedRow.Cells[0].Value.ToString());
             Students.StudentName = selectedRow.Cells[1].Value.ToString();
             Students.GuardianName = selectedRow.Cells[2].Value.ToString();
@@ -186,7 +193,12 @@ namespace try_application
                 Students.CurrentSemclass = selectedRow.Cells[9].Value.ToString();
             }
             catch(NullReferenceException ) { }
-
+            Students.AddedOn =DateTime.Parse(selectedRow.Cells[11].Value.ToString());
+            try
+            {
+                Students.Uploadimage = selectedRow.Cells[12].Value.ToString();
+            }
+            catch (NullReferenceException) { }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -216,6 +228,9 @@ namespace try_application
                 dataGridView1["ProgramIds", row].Value = student.ProgramId;
                 dataGridView1["CurrentSemclasses", row].Value = student.CurrentSemclass;
                 dataGridView1["PrintBinaries", row].Value = student.PrintBinary;
+                dataGridView1["AddedOns", row].Value = student.AddedOn;
+                dataGridView1["Images", row].Value = student.Uploadimage;
+
             }
         }
     }

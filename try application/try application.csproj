@@ -99,6 +99,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attendence.Designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaptureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
       <DependentUpon>RegisterPrints.cs</DependentUpon>
     </Compile>
     <Compile Include="Students.cs" />
+    <EmbeddedResource Include="Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaptureForm.resx">
       <DependentUpon>CaptureForm.cs</DependentUpon>
     </EmbeddedResource>
