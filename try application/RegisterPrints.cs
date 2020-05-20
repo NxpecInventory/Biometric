@@ -77,7 +77,29 @@ namespace try_application
             Students Stu = httpResponseMessage.Content.ReadAsAsync<Students>().Result;
             List<Students> studentsList = new List<Students>();
             studentsList.Add(Stu);
-            dataGridView1.DataSource = studentsList;
+            dataGridView1.Rows.Clear();
+            int row = 0;
+
+
+            foreach (var student in studentsList)
+            {
+                dataGridView1.Rows.Add();
+                row = dataGridView1.Rows.Count - 2;
+                dataGridView1["Ids", row].Value = student.Id;
+                dataGridView1["Names", row].Value = student.StudentName;
+                dataGridView1["GuardianNames", row].Value = student.GuardianName;
+                dataGridView1["Addresses", row].Value = student.Address;
+                dataGridView1["Contact", row].Value = student.ContactInfo;
+                dataGridView1["Statuses", row].Value = student.Status;
+                dataGridView1["AdmissionDates", row].Value = student.AddmissionDate;
+                dataGridView1["ClassIds", row].Value = student.ClassId;
+                dataGridView1["ProgramIds", row].Value = student.ProgramId;
+                dataGridView1["CurrentSemclasses", row].Value = student.CurrentSemclass;
+                dataGridView1["PrintBinaries", row].Value = student.PrintBinary;
+                dataGridView1["AddedOns", row].Value = student.AddedOn;
+                dataGridView1["Images", row].Value = student.Uploadimage;
+
+            }
         }
 
         private void add_Click(object sender, EventArgs e)

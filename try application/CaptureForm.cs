@@ -142,5 +142,6 @@ namespace try_application
 
 		private DPFP.Capture.Capture Capturer;
 
-	}
+        
+    }
 }

@@ -67,6 +67,7 @@ namespace try_application
             this.Picture.Size = new System.Drawing.Size(248, 288);
             this.Picture.TabIndex = 0;
             this.Picture.TabStop = false;
+         
             // 
             // Prompt
             // 
